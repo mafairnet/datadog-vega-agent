@@ -14,9 +14,9 @@ Get the module files for the datadog agent.
 
 ```
 cd /usr/src/
-wget https://github.com/mafairnet/datadog-svega/archive/master.zip
+wget https://github.com/mafairnet/datadog-vega-agent/archive/master.zip
 unzip master.zip
-cd datadog-svega/
+cd datadog-vega-agent/
 ```
 
 Copy the module files to the datadog directories.

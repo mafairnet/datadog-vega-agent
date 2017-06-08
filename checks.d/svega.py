@@ -46,13 +46,13 @@ class SvegaCheck(AgentCheck):
             mfcr2_disconnected_channels = 0
 
             for chan in mfcr2_results:
-                if "0x00" in chan or "BLOCK" in chan or "ANSWER" in chan or "IDLE" in chan:
+                if "0x00" in chan or "BLOCK" in chan or "ANSWER" in chan or "IDLE" in chan or "SEIZE" in chan:
                     chan_data = chan.split()
                     print(chan_data)
                     if len(chan_data) > 2:
                         if "IDLE" in chan_data[6] and "IDLE" in chan_data[7] :
                             mfcr2_available_channels += 1
-                        if "ANSWER" in chan_data[6] or "ANSWER" in chan_data[7] :
+                        if "ANSWER" in chan_data[6] or "ANSWER" in chan_data[7] or "SEIZE" in chan_data[6] or "SEIZE" in chan_data[7]:
                             mfcr2_inuse_channels += 1
                         if "BLOCK" in chan_data[6] or "BLOCK" in chan_data[7] :
                             mfcr2_blocked_channels += 1

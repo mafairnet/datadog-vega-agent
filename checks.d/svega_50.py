@@ -32,7 +32,7 @@ class SvegaCheck(AgentCheck):
         with requests.Session() as s:
             p = s.post('http://'+instance['host']+'/vs_login', data=payload)
 
-            ## MFCR2 DATA  
+            ## FXO DATA  
             # An authorised request.
             r = s.get('http://'+instance['host']+'/vsconfig?sid=0&form_name=95&dont_need_uri_decode=1&cli_command=show%20ports')
             vega_data = r.text
@@ -52,7 +52,7 @@ class SvegaCheck(AgentCheck):
                     if len(chan_data) > 2:
                         if "ready" in chan_data[4] :
                             fxo_available_channels += 1
-                        if "ready" in chan_data[4] :
+                        if "busy" in chan_data[4] :
                             fxo_inuse_channels += 1
                         if "offline" in chan_data[4] :
                             fxo_disconnected_channels += 1

@@ -26,10 +26,16 @@ cp -R checks.d/svega.py /opt/datadog-agent/agent/checks.d/
 cp -R conf.d/svega.yaml /etc/dd-agent/conf.d/
 ```
 
-Edit the configuration file for the module.
+Edit the configuration file for the module for the specific sangoma model.
 
+Sangoma Vega 400
 ```
-nano /etc/dd-agent/conf.d/svega.yaml
+nano /etc/dd-agent/conf.d/svega_400.yaml
+```
+
+Sangoma Vega 50
+```
+nano /etc/dd-agent/conf.d/svega_50.yaml
 ```
 
 Insert the IP, Name, User and Password for the Vega.
@@ -58,7 +64,7 @@ Check the datadog service status.
 The output should be like the next text.
 
 ```
-    svega
+    svega_*
     -----
       - instance #0 [OK]
       - instance #1 [OK]

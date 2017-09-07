@@ -1,5 +1,5 @@
 #
-# Sangoma Vega Agent for DataDog
+# Sangoma Vega 400 Agent for DataDog
 # By mafairnet [Miguel Angel Torres Govea]
 #
 

@@ -5,7 +5,7 @@ DataDog Agent plugin for the Sangoma Vega Hardware.
 
 Prerequisites
 -----------
-- Datadog
+- DataDog Agent v5 (1.5)
 
 Installation
 -----------
